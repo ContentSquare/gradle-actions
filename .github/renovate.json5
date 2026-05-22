@@ -2,13 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
     "config:recommended",
-    ":automergeMinor",
-    ":automergePr",
-    ":automergeRequireAllStatusChecks",
+    "github>gradle/renovate-agent//presets/dv-automerge-minor.json5",
     ":disableDependencyDashboard",
-    ":gitSignOff",
   ],
-  reviewersFromCodeOwners: true,
   // Renovate is scoped narrowly here: only the Develocity Gradle plugin (custom regex)
   // and the Gradle wrappers in selected sample directories.
   // Everything else (npm, github-actions, Maven coordinates) is managed by Dependabot
